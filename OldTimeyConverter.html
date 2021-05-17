@@ -1,0 +1,65 @@
+<html>
+<head>
+  <script>
+  function runMilesToFurlongs()
+  {
+    var start = document.getElementById('startvalue').value;
+    var end = document.getElementById('endvalue').value;
+    start = parseInt(start);
+    end = parseInt(end);
+    var result = "Miles - Furlongs <br>";
+    for(var i = start; i <= end; i++)
+    {
+      var furlongs = i*8;
+      result = result + i + "  -  " + furlongs + "<br>";
+    }
+    document.getElementById('result').innerHTML = result;
+  }
+
+  function runSlugs()
+  {
+    var start = document.getElementById('startvalue').value;
+    var end = document.getElementById('endvalue').value;
+    start = parseInt(start);
+    end = parseInt(end);
+    var result = "Slugs - Pounds <br>"
+    for(var i = start; i <= end; i++)
+    {
+      var pounds = i * 32.174;
+      result = result + i + "  -  " + pounds + "<br>";
+    }
+    document.getElementById('result').innerHTML = result;
+  }
+
+  function runFortNights()
+  {
+    var start = document.getElementById('startvalue').value;
+    var end = document.getElementById('endvalue').value;
+    start = parseInt(start);
+    end = parseInt(end);
+    var result = "FortNights - Days <br>"
+    for(var i = start; i <= end; i++)
+    {
+      var days = i * 14;
+      result = result + i + "  -  " + days + "<br>";
+    }
+    document.getElementById('result').innerHTML = result;
+  }
+
+  </script>
+</head>
+<body>
+  <h1> Old Timey Converter </h1>
+  <br>
+  <p> Start value </p>
+  <input type = "text" id = "startvalue"> <br> <br>
+  <p> End Value </p>
+  <input type = "text" id = "endvalue">
+  <br><br><br>
+  <input type = "button" value = "Miles To Furlongs" onclick = "runMilesToFurlongs()">
+  <input type = "button" value = "Slugs To Pounds" onclick = "runSlugs()">
+  <input type = "button" value = "FortNights to Days" onclick = "runFortNights()">
+  <br><hr><br>
+  <span id = "result"></span>
+  </body>
+  </html>
